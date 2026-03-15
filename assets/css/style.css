@@ -1,0 +1,87 @@
+:root {
+    /* Light theme */
+    --background: #F2E8D8;
+    --backgroundCard: #F7EFE2;
+    --border: #D6C3A5;
+    --textPrimary: #4A3A2A;
+    --textSecondary: #7A6A55;
+
+        /*===== Text Shadow -cs-> Stín textu =====*/
+    --text-shadow-soft:
+        -1px -1px 0 #000,
+        0 -1px 0 #000,
+        1px -1px 0 #000,
+        1px 0 0 #000,
+        1px 1px 0 #000,
+        0 1px 0 #000,
+        -1px 1px 0 #000,
+        -1px 0 0 #000;
+
+    --text-shadow-emphasis:
+        -1px -1px 0 #F1F1F1,
+        0 -1px 0 #F1F1F1,
+        1px -1px 0 #F1F1F1,
+        1px 0 0 #F1F1F1,
+        1px 1px 0 #F1F1F1,
+        0 1px 0 #F1F1F1,
+        -1px 1px 0 #F1F1F1,
+        -1px 0 0 #F1F1F1;
+
+    /* Dark theme */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--textSecondary);
+    background-color: var(--background);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 100;
+    margin: auto;
+}
+
+main {
+    width: 100%;
+    max-width: 1400px;
+    min-height: calc(100vh - 30px);
+    margin: 0 auto;
+    padding: 70px 20px 20px 20px;
+    text-shadow: var(--text-shadow-emphasis);
+}
+
+/* --- TITLE --- */
+.wrapper-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.wrapper-title img {
+    height: 25px;
+    width: auto;
+}
+
+.wrapper-title H1 {
+    font-family:  "Cormorant Garamond", serif;
+    color: var(--textPrimary);
+}
+
+footer {
+    width: 100%;
+
+}
