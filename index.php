@@ -38,7 +38,22 @@
             <section class="result-card"></section>
 
             <!-- GRID ZODIAC -->
-            <section class="grid-zodiac"git ></section>
+            <section class="grid-zodiac">
+                <div class="sign-grid">
+                    <div>VLK</div>
+                    <div>VYDRA</div>
+                    <div>SOKOL</div>
+                    <div>BOBR</div>
+                    <div>JELEN</div>
+                    <div>DATEL</div>
+                    <div>LOSOS</div>
+                    <div>MEDVĚD</div>
+                    <div>HAVRAN</div>
+                    <div>HAD</div>
+                    <div>SOVA</div>
+                    <div>HUSA</div>
+                </div>
+            </section>
         </div>
     </main>
     <footer></footer>

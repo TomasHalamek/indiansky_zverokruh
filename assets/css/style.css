@@ -6,7 +6,7 @@
     --textPrimary: #4A3A2A;
     --textSecondary: #7A6A55;
 
-        /*===== Text Shadow -cs-> Stín textu =====*/
+    /*===== Text Shadow -cs-> Stín textu =====*/
     --text-shadow-soft:
         -1px -1px 0 #000,
         0 -1px 0 #000,
@@ -37,6 +37,7 @@
 }
 
 body {
+    font-family: system-ui, sans-serif;
     font-size: 1rem;
     font-weight: 400;
     color: var(--textSecondary);
@@ -64,12 +65,14 @@ main {
 
 .indian-main-container {
     display: grid;
-    grid-template-columns: 3fr 2fr;
-    grid-template-areas: 
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    grid-template-rows: auto auto auto 1fr;
+    grid-template-areas:
         "title title"
         "desc desc"
         "date date"
         "card zodiac";
+    gap: 20px;
 }
 
 /* --- TITLE --- */
@@ -85,10 +88,11 @@ main {
 .wrapper-title img {
     height: clamp(1.125rem, 0.989rem + 0.68vw, 1.5rem);
     width: auto;
+    flex-shrink: 0;
 }
 
 .wrapper-title h1 {
-    font-family:  "Cormorant Garamond", serif;
+    font-family: "Cormorant Garamond", serif;
     font-size: clamp(1.5rem, 1.318rem + 0.91vw, 2rem);
     color: var(--textPrimary);
 }
@@ -108,15 +112,32 @@ main {
 }
 
 .result-card {
-    height: 350px;
+    /* height: 350px; */
     grid-area: card;
     border: 1px solid forestgreen;
 }
 
 .grid-zodiac {
-    height: 350px;
+    /* height: 350px; */
     grid-area: zodiac;
     border: 1px solid darkred;
+}
+
+.sign-grid {
+    display: grid;
+    align-content: start;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.sign-grid > div {
+    aspect-ratio: 1 / 1;   /* vždy čtverec */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #4A3A2A;
+    border-radius: 50%;
 }
 
 footer {
